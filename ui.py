@@ -48,7 +48,7 @@ def send_text():
     user_input = st.session_state["input"]
     if user_input:
         # Use the ChatGPTClient object to generate a response
-        url = "http://localhost:8000/converse"
+        url = "https://transcript-contentor.onrender.com:8000/converse"
         payload = {"message": user_input, "conversation_id": st.session_state.conversation_id}
 
         response = requests.post(url, json=payload).json()
